@@ -1,4 +1,4 @@
-package com.noob.DS;
+package com.noob.DS.Arrays;
 
 public class DynamicArrays {
     int[] arr = new int[10];
