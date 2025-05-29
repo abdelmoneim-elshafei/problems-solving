@@ -43,6 +43,28 @@ public class DoublyLinkedList {
         size++;
     }
 
+    public void removeFirst() {
+        head = head.next;
+        head.prev = null;
+        size--;
+    }
+
+    public void removeLast() {
+        tail = tail.prev;
+        tail.next = null;
+        size--;
+    }
+
+    public void removeAt(int index) {
+        Node temp = head;
+        for (int i = 0; i < index - 1; i++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        temp.next.prev = temp;
+        size--;
+    }
+
     public void traverse() {
         Node temp = head;
         while (temp != null) {
